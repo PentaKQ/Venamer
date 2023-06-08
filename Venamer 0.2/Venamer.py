@@ -898,7 +898,7 @@ class Ui_Venamer(object):
                         if file == after_list[i]:
                             os.rename(path+'\\'+file,path+'\\'+before_list[i])
                             with io.open('logs.txt','a+', encoding='utf-8') as f:
-                                f.(f'{datetime.now()}: Hoàn Tác [{file}] -> ['+before_list[i]+']\n')
+                                f.write(f'{datetime.now()}: Hoàn Tác [{file}] -> ['+before_list[i]+']\n')
                             f.close()
                             break
                 done = QMessageBox()
